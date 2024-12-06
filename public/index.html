@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home Page</title>
+  </head>
+  <body class="mx-auto max-w-7xl">
+    <header class="bg-gray-200 rounded-b-md py-4">
+      <ul
+        class="flex items-center justify-start gap-4 px-4 sm:px-6 lg:px-8 text-gray-900"
+      >
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+      </ul>
+    </header>
+    <main
+      class="flex flex-col items-center justify-center gap-8 py-24 mx-auto max-w-sm"
+    >
+      <!-- Title -->
+      <h1 class="text-3xl text-gray-900 font-medium">Welcome to homepage</h1>
+
+      <!-- Buttons -->
+      <div class="flex items-center justify-between w-full mt-6">
+        <!-- Get Character Button -->
+        <button
+          class="px-6 py-4 rounded-md bg-gray-200 hover:bg-gray-300 duration-300 text-sm"
+          onclick="showCharacters()"
+        >
+          Show Characters
+        </button>
+
+        <!-- Get Form Button -->
+        <button
+          class="px-6 py-4 rounded-md bg-gray-200 hover:bg-gray-300 duration-300 text-sm"
+          onclick="getForm()"
+        >
+          New Character Add
+        </button>
+      </div>
+
+      <!-- Form -->
+      <form id="addCharacterForm" class="hidden space-y-2 w-full">
+        <!-- Username -->
+        <div>
+          <label
+            for="username"
+            class="block text-sm/6 font-medium text-gray-900"
+            >Username</label
+          >
+          <div class="mt-2">
+            <input
+              type="username"
+              name="username"
+              id="username"
+              autocomplete="username"
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+            />
+          </div>
+        </div>
+
+        <!-- Full Name -->
+        <div>
+          <label for="name" class="block text-sm/6 font-medium text-gray-900"
+            >Full Name</label
+          >
+          <div class="mt-2">
+            <input
+              type="name"
+              name="name"
+              id="name"
+              autocomplete="name"
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+            />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="px-4 py-3 rounded-md bg-slate-500 hover:bg-slate-600 duration-300 text-sm text-white w-full"
+        >
+          Add New Character
+        </button>
+      </form>
+
+      <!-- Characters -->
+      <div id="output" class="rounded-md w-full"></div>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
